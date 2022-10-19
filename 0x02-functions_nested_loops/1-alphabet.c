@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- *main - Entry point
+ *print_alphabet -output the 26 letters of alphabet
  *
  *Return: void
  *
