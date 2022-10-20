@@ -4,6 +4,8 @@
  *_islower - check the if param is lowercase
  *
  *Return:1 if lowercase and 0 otherwise
+ *
+ *'c' - is the character that function receive
  */
 
 int _islower(int c)
