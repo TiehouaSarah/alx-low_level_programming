@@ -3,13 +3,14 @@
 /**
  *_islower - check the if param is lowercase
  *
- *Return:1 if lowercase and 0 otherwise
+ *@c: The character to be checked.
  *
- *'c' - is the character that function receive
+ *Return:1 if lowercase and 0 otherwise
  */
 
 int _islower(int c)
 {
+
 	if (c >= 'a' && c <= 'z')
 		return (1);
 	else
