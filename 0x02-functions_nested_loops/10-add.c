@@ -12,3 +12,4 @@
 int add(int c, int n)
 {
 	return (c + n);
+}
