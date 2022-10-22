@@ -11,8 +11,9 @@
 
 int main(void)
 {
-	char sd1[38] = "and that piece of art is useful\"";
-	char sd2[30] = "- Dora Korpar, 2015-10-19\n";
+	char sd1[] = "and that piece of art is useful\"";
+	char sd2[] = "- Dora Korpar, 2015-10-19\n";
+	
 	strcat(sd1, sd2);
 
 	write(STDOUT_FILENO, sd1, 59);
