@@ -11,7 +11,7 @@ void print_rev(char *s)
 {
 	int charSize = strlen(s);
 
-	while (charSize > 0)
+	while (charSize >= 0)
 	{
 		_putchar(s[charSize]);
 		charSize--;
