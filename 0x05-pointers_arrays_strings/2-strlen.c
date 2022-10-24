@@ -8,7 +8,7 @@
  *Return: void
  */
 
-nt _strlen(char *s)i
+int _strlen(char *s)i
 {
 	int vf = strlen(s);
 
