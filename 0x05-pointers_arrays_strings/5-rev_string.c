@@ -10,7 +10,7 @@
 void rev_string(char *s)
 {
 	int charSize = strlen(s) - 1;
-	char d[];
+	char d[charSize];
 
 	while (charSize >= 0)
 	{
