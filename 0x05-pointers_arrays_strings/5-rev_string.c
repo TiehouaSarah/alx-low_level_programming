@@ -10,10 +10,11 @@
 void rev_string(char *s)
 {
 	int charSize = strlen(s) - 1;
+	char d[];
 
 	while (charSize >= 0)
 	{
-		_putchar(s[charSize]);
+		d[charSize] = s[charSize];
 		charSize--;
 	}
 	_putchar('\n');
