@@ -12,7 +12,7 @@
  *Return: void
  */
 
-void print_array(int *a, int n)i
+void print_array(int *a, int n)
 {
 	if (n > 0)
 	{
