@@ -3,17 +3,20 @@
 #include <string.h>
 
 /**
- *_strcpy - copy address function
+ * _strcpy - copies the string pointed to by src, including
  *
- * @*dest : first pointeur
+ * Description : None
  *
- * @*src : second pointer
+ * @dest : first pointeur
  *
- *Return: char 
+ * @src : second pointer
+ *
+ * Return : reurn a char let's says a pointer
  */
 
 char *_strcpy(char *dest, char *src)
 {
 	*dest = *src;
-	return (*dest);
+
+	return ((char *)dest);
 }
