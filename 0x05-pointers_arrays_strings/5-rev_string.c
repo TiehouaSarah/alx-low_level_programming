@@ -1,5 +1,6 @@
 #include "main.h"
 #include <string.h>
+#include <stdlib.h>
 /**
  * rev_string - printe char content in reverse
  *
@@ -10,11 +11,11 @@
 void rev_string(char *s)
 {
 	int charSize = strlen(s) - 1;
-	char d[charSize];
+	char *dico = NULL;
 
 	while (charSize >= 0)
 	{
-		d[charSize] = s[charSize];
+		dico[charSize] = s[charSize];
 		charSize--;
 	}
 	_putchar('\n');
