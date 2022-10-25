@@ -3,9 +3,9 @@
 #include <string.h>
 
 /**
- * _strcpy - copies the string pointed to by src, including
+ * *_strcpy - copies the string pointed to by src, including
  *
- * Description : None
+ * Description: 'the program's description'
  *
  * @dest : first pointeur
  *
@@ -16,7 +16,7 @@
 
 char *_strcpy(char *dest, char *src)
 {
-	*dest = *src;
+	dest = src;
 
 	return ((char *)dest);
 }
