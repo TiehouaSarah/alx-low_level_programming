@@ -26,5 +26,6 @@ void puts_half(char *str)
 
 	strncpy(seeen, str, halfSize);
 	printf("%s\n", seeen);
-
+/*	printf("%d\n",halfSize);
+*/
 }
