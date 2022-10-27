@@ -16,8 +16,8 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-
-	if ((size_t)n <= strlen(src))
+	strncat(dest, src, n);
+	/*if ((size_t)n <= strlen(src))
 	{
 		int i = 0;
 		char dd[] = {'\0'};
@@ -28,6 +28,6 @@ char *_strncat(char *dest, char *src, int n)
 			i++;
 		}
 		strcat(dest, dd);
-	}
+	}*/
 	return (dest);
 }
