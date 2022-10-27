@@ -14,13 +14,13 @@
  *Return: dest
  */
 
-char *_strncpy(char *dest, char *src, int n)
+char *_strncat(char *dest, char *src, int n)
 {
 
-	if (n <= strlen(src))
+	if ((size_t)n <= strlen(src))
 	{
 		int i = 0;
-		char dd[] = "";
+		char dd[] = {'\0'};
 
 		while (i < n)
 		{
