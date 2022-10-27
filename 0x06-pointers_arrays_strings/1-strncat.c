@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * _strncpy - return concatenate string
+ * _strncat - return concatenate string
  *
  * @dest : first parameter
  *
@@ -17,17 +17,5 @@
 char *_strncat(char *dest, char *src, int n)
 {
 	strncat(dest, src, n);
-	/*if ((size_t)n <= strlen(src))
-	{
-		int i = 0;
-		char dd[] = {'\0'};
-
-		while (i < n)
-		{
-			dd[i] = src[i];
-			i++;
-		}
-		strcat(dest, dd);
-	}*/
 	return (dest);
 }
