@@ -15,7 +15,7 @@ char *string_toupper(char *p)
 
 	while (*s)
 	{
-		*s = toupper((unsigned char) *s);
+		*s = toupper(*s);
 		s++;
 	}
 	return (s);
