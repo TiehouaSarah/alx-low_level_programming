@@ -11,12 +11,13 @@
 
 char *string_toupper(char *p)
 {
-	char *s = p;
+	int a = 0;
 
-	while (*s)
+	while (p[a])
 	{
-		*s = toupper(*s);
-		s++;
+		if (p[a] >= 97 && p[a] <= 122)
+			p[a] -= 32;
+		a++;
 	}
-	return (s);
+	return (p);
 }
