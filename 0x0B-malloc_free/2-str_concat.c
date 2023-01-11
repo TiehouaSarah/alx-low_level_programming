@@ -34,6 +34,9 @@ char *str_concat(char *s1, char *s2)
 		len2++;
 
 	completePhrase = malloc(sizeof(char) * (len1 + len2 + 1));
+	if (completePhrase == NULL)
+		return (NULL);
+
 	while (i < len1)
 	{
 		completePhrase[i] = s1[i];
