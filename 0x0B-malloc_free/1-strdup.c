@@ -3,7 +3,8 @@
 
 /**
  * _strdup - Coping pointer of array
- * *str: first parameter
+ *
+ * str: first parameter
  *
  * Description: nothing to say
  *
@@ -12,14 +13,31 @@
 char *_strdup(char *str)
 {
 	char *myArray;
-	unsigned int i = 0;
+	unsigned int i, lena;
 
-	myArray = malloc(sizeof(char) * sizeof(str));
+	i = 0;
+	lena = 0;
+
+	if (str == NULL)
+		return (NULL);
+
+	while (str)
+	{
+		if (str[lena])
+		{
+			lena++;
+		} else
+		{
+			break;
+		}
+	}
+
+	myArray = malloc(sizeof(char) * (lena + 1));
 	if (myArray == NULL)
 	{
 		return (NULL);
 	}
-	while (i < sizeof(str))
+	while (str[i] != '\0')
 	{
 		myArray[i] = str[i];
 		i++;
