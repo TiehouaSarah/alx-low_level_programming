@@ -23,24 +23,22 @@ char *str_concat(char *s1, char *s2)
 	len2 = 0;
 	i = 0;
 
-	if(s1 == NULL)
+	if (s1 == NULL)
 		s1 = "";
-	if(s2 == NULL)
+	if (s2 == NULL)
 		s2 = "";
 
-	while(s1[len1] != '\0')
+	while (s1[len1] != '\0')
 		len1++;
-	while(s2[len2] != '\0')
+	while (s2[len2] != '\0')
 		len2++;
 
-	completePhrase = malloc(sizeof(char) * (len1 + len2 + 2));
-	while(i < len1)
+	completePhrase = malloc(sizeof(char) * (len1 + len2 + 1));
+	while (i < len1)
 	{
 		completePhrase[i] = s1[i];
 		i++;
 	}
-
 	completePhrase = strcat(completePhrase, s2);
-	
 	return (completePhrase);
 }
