@@ -16,7 +16,7 @@
 int **alloc_grid(int width, int height)
 {
 	int **dimensionalArrayToReturn;
-	unsigned int j, i;
+	int j, i;
 
 	i = 0;
 	j = 0;
