@@ -4,7 +4,7 @@
 /**
  * _strdup - Coping pointer of array
  *
- * str: first parameter
+ * @str: first parameter
  *
  * Description: nothing to say
  *
