@@ -12,12 +12,12 @@
 
 void *malloc_checked(unsigned int b)
 {
-	unsigned int  *memoryToReturn;
+	int  *memoryToReturn;
 
 	memoryToReturn = malloc(b);
 	if (memoryToReturn == NULL)
 	{
-		return (NULL);
+		exit(98);
 	}
 	return (memoryToReturn);
 
