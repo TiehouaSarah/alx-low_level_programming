@@ -1,11 +1,7 @@
 #ifndef FUNCTION_POINTERS_H
 #define FUNCTION_POINTERS_H
+#include <stdlib.h>
 
-/**
- * function_pointers - pointers to function
- *
- * Return:nothing
- */
 
 void print_name(char *name, void (*f)(char *));
 
