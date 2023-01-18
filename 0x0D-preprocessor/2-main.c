@@ -3,19 +3,11 @@
 /**
  * main - check the code
  *
- * @argc : first parameter
- * @argv : second parameter
- *
  * Return: Always 0.
  */
 
-int main(int argc, char *argv[])
+int main(void)
 {
-#ifndef FILENAME
-#define FILENAME argv[0]
-#endif
-	printf("%s\n", FILENAME);
-	(void)argc;
-
+	printf("%s\n", __FILE__);
 	return (0);
 }
