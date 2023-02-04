@@ -10,11 +10,18 @@
 
 int main(void)
 {
-	int sum;
+	unsigned int n;
 
-	sum = sum_them_all(2, 98, 1024);
-	printf("%d\n", sum);
-	sum = sum_them_all(4, 98, 1024, 402, -1024);
-	printf("%d\n", sum);
+	n = binary_to_uint("1");
+	printf("%u\n", n);
+	n = binary_to_uint("101");
+	printf("%u\n", n);
+	n = binary_to_uint("1e01");
+	printf("%u\n", n);
+	n = binary_to_uint("1100010");
+	printf("%u\n", n);
+	n = binary_to_uint("0000000000000000000110010010");
+	printf("%u\n", n);
+
 	return (0);
 }
