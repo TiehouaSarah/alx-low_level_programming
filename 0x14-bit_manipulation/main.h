@@ -1,6 +1,5 @@
-#ifndef VARIADIC_FUNCTION_H
-#define VARIADIC_FUNCTION_H
-#include <stdlib.h>
+#ifndef MAIN_H
+#define MAIN_H
 
 unsigned int binary_to_uint(const char *b);
 
