@@ -22,10 +22,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fp == NULL)
 		return (0);
 
-	if (fp != 0)
+	while (!feof(fp))
 	{
-		while ((size = fread(ch, sizeof(char), sizeof(ch), fp)) != 0)
-			fwrite(ch, sizeof(char), size, stdout);
+		if(fgets(ch, letters, fp) != NULL)
+			printf("%s", fgets(ch, letters, fp));
+		size++;
 	}
 
 	fclose(fp);
