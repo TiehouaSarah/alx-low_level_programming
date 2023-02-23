@@ -1,6 +1,9 @@
-Write a function that converts a binary number to an unsigned int.
-	Prototype: unsigned int binary_to_uint(const char *b);
-	where b is pointing to a string of 0 and 1 chars
-	Return: the converted number, or 0 if
-		there is one or more chars in the string b that is not 0 or 1
-		b is NULL
+File 0-read_textfile.c is a function that reads a text file and prints it to the POSIX standard output.
+
+File 1-create_file.c is a function that creates a file.
+
+File 2-append_text_to_file.c is a function that appends text at the end of a file.
+
+File 3-cp.c is a program that copies the content of a file to another file.
+
+File main.h is the header file that contains all these function prototypes.

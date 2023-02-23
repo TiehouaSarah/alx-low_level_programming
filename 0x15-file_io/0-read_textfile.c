@@ -1,35 +1,46 @@
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
 
 /**
- * read_textfile - function that creates a file
- * @filename: first parameter
- * @letters: second parameter
+ * read_textfile - reads a text file and prints it to the standard output
+ * @filename: name of the file to be read
+ * @letters: number of letters to read and print
  *
- * Return: int value
- *
+ * Return: the number of letters printed, or 0 if it failed
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *fp;
-	char *ch = malloc(sizeof(char) * (letters + 1));
-	ssize_t size = 0;
+	int fd;
+	int s, t;
+	char *buf;
 
-	if (filename == NULL)
-		return (0);
-	fp = fopen(filename, "r");
-	if (fp == NULL)
+	if (!filename)
 		return (0);
 
-	if (fp != 0)
+	fd = open(filename, O_RDONLY);
+	if (fd < 0)
+		return (0);
+
+	buf = malloc(sizeof(char) * letters);
+	if (!buf)
+		return (0);
+
+	s = read(fd, buf, letters);
+	if (s < 0)
 	{
-		while ((size = fread(ch, sizeof(char), sizeof(ch), fp)) != 0)
-			fwrite(ch, sizeof(char), size, stdout);
+		free(buf);
+		return (0);
+	}
+	buf[s] = '\0';
+
+	close(fd);
+
+	t = write(STDOUT_FILENO, buf, s);
+	if (t < 0)
+	{
+		free(buf);
+		return (0);
 	}
 
-	fclose(fp);
-	free(ch);
-
-	return (size);
+	free(buf);
+	return (t);
 }
