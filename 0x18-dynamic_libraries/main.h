@@ -37,3 +37,9 @@ unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 
 char *_strstr(char *haystack, char *needle);
+
+int add(int c, int n);
+int mul(int a, int b);
+int mod(int c, int n);
+int sub(int c, int n);
+int div(int a, int b);
