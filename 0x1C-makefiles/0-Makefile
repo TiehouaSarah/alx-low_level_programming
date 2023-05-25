@@ -1,0 +1,26 @@
+# Compiler
+CC = gcc
+
+# Source files
+SRCS = main.c school.c
+
+# Object files
+OBJS = $(SRCS:.cpp=.o)
+
+# Binary executable
+TARGET = school
+
+# Build target
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CC) $(OBJS) -o $(TARGET)
+
+# Compile source files into object files
+%.o: %.cpp
+	$(CC) -c $< -o $@
+
+# Clean object files and executable
+clean:
+	rm -f $(OBJS) $(TARGET)
+
